@@ -1,11 +1,10 @@
-import './App.css';
+import Button from "./components/Button";
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-2xl  underline bg-secondary-gradient">
-        Hello world!
-      </h1>
+    <div className="">
+      <Layout>Contents</Layout>
     </div>
   );
 }
