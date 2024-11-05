@@ -5,6 +5,7 @@ import SideNav from "./SideNav";
 import ReadingCard from "./ReadingCard";
 import Button from "./Button";
 import Readingmage from "../assets/images/reading_1.png";
+import PageFooter from "./PageFooter";
 
 interface Props {
   children?: ReactNode;
@@ -38,7 +39,7 @@ const Layout: FC<Props> = ({ children }) => {
           ))}
         </div>
       </div>
-      <footer className="mt-40">Footer</footer>
+      <PageFooter />
     </div>
   );
 };
