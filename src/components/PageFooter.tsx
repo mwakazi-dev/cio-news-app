@@ -20,6 +20,7 @@ const PageFooter = () => {
             <Button label="REGISTER" variant={ButtonVariant.Primary} />
           </div>
         </div>
+        <hr className="mt-[30px] mb-[20px] border-light-gray" />
         <div className="flex justify-between items-center gap-4 mt-[30px]">
           <div className="w-2/4">
             <p>
