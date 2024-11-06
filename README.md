@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# CIO News App - React js, Typescript, Tailwind
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project is a news app built with React js, Typescript, Tailwind. It provides users with the latest news articles from various sources.
 
-In the project directory, you can run:
+## Setup Instructions
 
-### `npm start`
+1. Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+` git clone [https://github.com/mwakazi-dev/cio-news-app] cd [cio-news-app]`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Install dependencies:
 
-### `npm test`
+   `npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Start the the app:
+   `npm run start`
 
-### `npm run build`
+4. Run unit test:
+   `npm run test`
+5. Run lint:
+   `npm run lint`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `src/__tests__/`: All Unit tests
+- `src/pages/`: All pages
+- `src/assets/`: Images and icons
+- `src/components/`: Reusable React components
+- `src/constants/`: For code clarity and consistency
+- `lib/`: reusable functions and utilities
+- `services/`: Services for API calls
+- `styles/`: Handle all application styles
+- `types/`: TypeScript type definitions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Key Features
 
-### `npm run eject`
+- **News Feed**: Displays the latest news articles from various sources.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Responsive Design**: Ensures a seamless experience across devices.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Approach and Rationale
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **TypeScript**: Implemented for improved code quality and maintainability.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Modular Component Structure**: Enhances reusability and maintainability.
 
-## Learn More
+3. **Eslint and Prettier**: Ensures consistent code style and readability
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Tailwind CSS**: For rapid UI development and responsiveness.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Husky precommit hooks**: Enforces code quality and consistency
+
+6. **Documentation**: Added comments and documentation to enhance code readability and collaboration.
+
+## Future Improvements
+
+- Styling DRY principles
+- Implement Storybook for component documentation, testing and team collaboration
+- Refactor the codebase to follow best practices and improve code quality
+- Improve testing coverage
+- Implement a search functionality
+- Implement a dark
+- Increease responsiveness to enhance user experience
