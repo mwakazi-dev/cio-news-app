@@ -1,6 +1,6 @@
 import { SIDE_LINKS } from "../constants/data";
 import PostCard from "./PostCard";
-import SectionTile from "./SectionTile";
+import SectionTile from "./SectionTitle";
 import PostImage from "../assets/images/post_1.png";
 import Tag from "./Tag";
 import AdPlaceholder from "./AdPlaceholder";
