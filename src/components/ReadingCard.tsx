@@ -20,7 +20,7 @@ const ReadingCard: FC<Props> = ({
   return (
     <div className="flex flex-col max-w-[317px] max-h-[354px] w-full flex-wrap">
       <div>
-        <img src={imageUrl} />
+        <img src={imageUrl} alt="Banner" />
       </div>
       <div className="flex gap-1 py-2">
         <Tag title="News" />
@@ -36,6 +36,7 @@ const ReadingCard: FC<Props> = ({
           <img
             src={authorImageUrl}
             className="w-[24px] h-[24px] rounded-full"
+            alt="Author"
           />
           <p className="text-[#000000B2] text-[12px] leading-[17.28px]">
             {author}

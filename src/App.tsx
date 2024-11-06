@@ -1,13 +1,17 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <div className="">
+    <QueryClientProvider client={queryClient}>
       <Layout>
         <Home />
       </Layout>
-    </div>
+    </QueryClientProvider>
   );
 }
 

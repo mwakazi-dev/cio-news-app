@@ -14,12 +14,15 @@ This project is a news app built with React js, Typescript, Tailwind. It provide
 
    `npm install`
 
-3. Start the the app:
+3. Start the local server:
+   `json-server --watch db.json --port 8000`
+
+4. Start the app:
    `npm run start`
 
-4. Run unit test:
+5. Run unit test:
    `npm run test`
-5. Run lint:
+6. Run lint:
    `npm run lint`
 
 ## Project Structure

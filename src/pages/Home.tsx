@@ -1,11 +1,23 @@
-import Tag from "../components/Tag";
-import authorImageUrl from "../assets/images/reading_1.png";
+import { useQuery } from "@tanstack/react-query";
+
 import { ReactComponent as ClockIcon } from "../assets/images/clock.svg";
+import { newsService } from "../services/newsService";
+import Tag from "../components/Tag";
 import BannerImage from "../assets/images/banner.svg";
+import authorImageUrl from "../assets/images/reading_1.png";
 import BannerImage2 from "../assets/images/banner_2.svg";
 import BlockQuote from "../components/BlockQuote";
 const Home = () => {
   const tags = ["Technology", "Cybersecurity", "Cloud", "Business", "Economy"];
+
+  // utilized this for caching purposes to improve performance
+  const { isLoading } = useQuery({
+    queryKey: ["news"],
+    queryFn: newsService.getNews,
+  });
+
+  if (isLoading) return <p>Loading...</p>;
+
   return (
     <div>
       <div>
@@ -23,6 +35,7 @@ const Home = () => {
           <img
             src={authorImageUrl}
             className="w-[24px] h-[24px] rounded-full"
+            alt="Banner"
           />
           <p className="text-[#000000B2] text-[12px] leading-[17.28px]">
             John Doe
@@ -40,7 +53,7 @@ const Home = () => {
           </div>
         </div>
         <div className="mt-[48px]">
-          <img src={BannerImage} />
+          <img src={BannerImage} alt="Banner" />
         </div>
         <div>
           <h1 className="font-[600] text-[20px] leading-[24px] mt-[45px]">
@@ -62,7 +75,7 @@ const Home = () => {
           </p>
         </div>
         <div className="grid  grid-cols-2  mt-[62px]">
-          <img src={BannerImage2} />
+          <img src={BannerImage2} alt="Banner" />
           <div className="grid grid-cols-1 gap-8">
             <p className="font-[400] text-[16px] leading-[26px]">
               BUI East Africa General Manager Hasmukh Chudasama delivered the

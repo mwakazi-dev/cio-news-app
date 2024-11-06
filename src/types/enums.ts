@@ -3,3 +3,7 @@ export enum ButtonVariant {
   Primary = "primary",
   Secondary = "secondary",
 }
+
+export enum Endpoints {
+  NEWS = "news",
+}
