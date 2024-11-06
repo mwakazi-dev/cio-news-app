@@ -16,7 +16,7 @@ const Button: FC<Props> = ({
   return (
     <button
       className={twMerge(
-        "text-base text-light py-[12px] px-[15px] rounded-[8px] min-w-[152px] min-h-[43px] leading-[19.2px] font-[400]",
+        "min-w-[152px] text-light px-[15px] py-[12px] rounded-[8px] font-[300] text-[16px] leading-[19.2px]",
         variant === "primary" && "bg-primary ",
         variant === "secondary" && "bg-secondary text-light",
         variant === "default" && "border  border-[#1c1b21]  text-darkest",

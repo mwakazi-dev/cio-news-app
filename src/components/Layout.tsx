@@ -14,7 +14,7 @@ interface Props {
 const Layout: FC<Props> = ({ children }) => {
   return (
     <div className="w-full h-full flex flex-col ">
-      <div className="mx-[80px] flex-grow">
+      <div className="mx-[16px] md:mx-[80px] flex-grow">
         <Navbar />
         <div className=" grid grid-cols-4 gap-8 mt-[75px]">
           <div className="col-span-1">

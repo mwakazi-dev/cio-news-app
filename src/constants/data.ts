@@ -2,7 +2,7 @@ import { NavLink } from "../types/nav";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "HOME", path: "/" },
-  { label: "NEWS", path: "/news" },
+  { label: "NEWS", path: "/news", showDropdown: true },
   { label: "CXO SERIES", path: "/cxo-series" },
   { label: "PRODUCT REVIEWS", path: "/product-reviews" },
   { label: "WOMEN IN TECH", path: "/women-in-tech" },

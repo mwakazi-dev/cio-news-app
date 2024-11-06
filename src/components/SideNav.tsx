@@ -7,13 +7,13 @@ import AdPlaceholder from "./AdPlaceholder";
 
 const SideNav = () => {
   return (
-    <aside className="h-full pt-16">
+    <aside className="h-full pt-[100px]">
       <div className="flex flex-col ">
         <SectionTile title="Categories" />
-        <nav className="pt-4">
-          <ul className="flex flex-col">
+        <nav className="pt-[15px]">
+          <ul className="flex flex-col gap-[20px]">
             {SIDE_LINKS.map((link) => (
-              <li key={link.path} className="pb-[20px]">
+              <li key={link.path}>
                 <a
                   href={link.path}
                   className="text-[#1c1b21] text-[14px] font-[400] leading-[16.94px]"
@@ -24,7 +24,7 @@ const SideNav = () => {
             ))}
           </ul>
         </nav>
-        <div className="min-w-[246px] min-h-[95px] w-full flex-wrap">
+        <div className="min-w-[246px] min-h-[95px] w-full flex-wrap mt-[28px]">
           <SectionTile title="Latest Stories" />
           <div className="flex flex-col gap-[20px] mt-[20px] h-full">
             {[1, 2, 3].map((_, index) => (
