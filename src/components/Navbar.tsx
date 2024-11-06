@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <header className="hidden lg:flex  justify-between items-center  mt-[24px] w-full">
-        <div className="">
+        <div>
           <Logo />
         </div>
         <nav className="w-full">

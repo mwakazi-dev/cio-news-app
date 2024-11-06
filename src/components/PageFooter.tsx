@@ -7,11 +7,12 @@ import { ReactComponent as LinkedinIcon } from "../assets/images/linkedin.svg";
 import { ReactComponent as InstagramIcon } from "../assets/images/instagram.svg";
 import { ReactComponent as YoutubeIcon } from "../assets/images/youtube.svg";
 import { ReactComponent as FlickrIcon } from "../assets/images/flickr.svg";
+import { FOOTER_LINKS } from "../constants/data";
 
 const PageFooter = () => {
   return (
-    <div className="bg-light mt-[85px] max-h-[425px]">
-      <div className="w-[70%] mx-[222px] my-[52px]">
+    <div className="bg-light mt-[85px] ">
+      <div className="mx-[16px] md:mx-[222px] my-[52px]">
         <div className="flex justify-between items-center">
           <div>
             <Logo color="light" />
@@ -20,10 +21,10 @@ const PageFooter = () => {
             <Button label="REGISTER" variant={ButtonVariant.Primary} />
           </div>
         </div>
-        <hr className="mt-[30px] mb-[20px] border-light-gray" />
-        <div className="flex justify-between items-center gap-4 mt-[30px]">
-          <div className="w-2/4">
-            <p>
+        <hr className="hidden md:block mt-[30px] mb-[20px]   border-light" />
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-[30px]">
+          <div className="mt-[60px] ">
+            <p className="text-[12px] leading-[14.57px] font-[300] md:w-[312px] ">
               CIO Africa serves the enterprise community of CIOs and senior
               technology decision-makers with peer insight and expertise on
               Business Strategy, Innovation and Leadership. CIO attracts the
@@ -31,56 +32,76 @@ const PageFooter = () => {
               executives of any media brand, reaching over one million.
             </p>
           </div>
-          <div>
-            <div>
-              <nav>
-                <ul>
-                  <li>
-                    <a href="/">Advertising</a>
-                  </li>
-                  <li>
-                    <a href="/">Services</a>
-                  </li>
-                  <li>
-                    <a href="/">About us</a>
-                  </li>
-                  <li>
-                    <a href="/">Contact us</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+          <nav className="mt-[26px]">
+            <ul className="list-none flex md:flex-col justify-center flex-wrap gap-4">
+              {FOOTER_LINKS.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.path}
+                    className="text-[15px] leading-[19.53px] font-[300] text-center"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+              <li className=" xs:block sm:block md:hidden">
+                <a
+                  href="/"
+                  className="text-[15px] leading-[19.53px] font-[300] text-center"
+                >
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="text-[15px] leading-[19.53px] font-[300] text-center"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="flex md:hidden items-center  justify-center gap-4 mt-[24px]">
+            <FacebookIcon />
+            <TwitterIconfrom />
+            <LinkedinIcon />
+            <InstagramIcon />
+            <YoutubeIcon />
+            <FlickrIcon />
           </div>
-          <div className="flex flex-col items-center  justify-center gap-4">
-            <div className="flex justify-center items-center gap-3">
+          <div className="hidden md:flex md:flex-col items-center  justify-center gap-4 mt-[24px]">
+            <div className="flex items-center gap-4">
               <FacebookIcon />
               <TwitterIconfrom />
             </div>
-            <div className="flex justify-center items-center gap-3">
+            <div className="flex items-center gap-4">
               <LinkedinIcon />
               <InstagramIcon />
             </div>
-            <div className="flex justify-center items-center gap-3">
+            <div className="flex items-center gap-4">
               <YoutubeIcon />
               <FlickrIcon />
             </div>
           </div>
         </div>
-        <div className="flex justify-between mt-[58px]">
-          <div>
-            <p className="font-[400] leading-[18px] text-[15px] text-[#424242]">
-              &copy; {new Date().getFullYear()} CIO Africa. All rights reserved.
-            </p>
-          </div>
-          <div>
-            <p className="font-[400] leading-[18px] text-[15px] text-[#424242]">
+        <div className="flex justify-center md:justify-between mt-[20.16px]">
+          <p className="font-[300] leading-[16.8px] text-[14px] text-[#1c1b21]">
+            &copy; {new Date().getFullYear()} CIO Africa. All rights reserved.
+          </p>
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="/"
+              className="text-[15px] leading-[19.53px] font-[300] text-center"
+            >
               Terms & Conditions
-            </p>
-          </div>
-          <div>
-            <p className="font-[400] leading-[18px] text-[15px] text-[#424242]">
+            </a>
+            <a
+              href="/"
+              className="text-[15px] leading-[19.53px] font-[300] text-center"
+            >
               Privacy Policy
-            </p>
+            </a>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
 interface Props {
   message: string;
@@ -7,8 +7,10 @@ interface Props {
 const BlockQuote: FC<Props> = ({ message }) => {
   return (
     <div className="flex items-center gap-1">
-      <div className="h-[48px] w-[2px] bg-primary mr-[8px]"></div>
-      <blockquote>“{message}”</blockquote>
+      <div className="h-[96px] md:h-[48px] w-[2px] bg-primary mr-[8px]"></div>
+      <blockquote>
+        <em>“{message}”</em>
+      </blockquote>
     </div>
   );
 };

@@ -20,3 +20,10 @@ export const SIDE_LINKS: NavLink[] = [
   { label: "Features", path: "/features" },
   { label: "Popular stories", path: "/popular-stories" },
 ];
+
+export const FOOTER_LINKS: NavLink[] = [
+  { label: "Advertising", path: "/" },
+  { label: "Services", path: "/" },
+  { label: "About us", path: "/" },
+  { label: "Contact us", path: "/" },
+];

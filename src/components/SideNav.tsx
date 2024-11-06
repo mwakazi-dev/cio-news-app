@@ -7,11 +7,11 @@ import AdPlaceholder from "./AdPlaceholder";
 
 const SideNav = () => {
   return (
-    <aside className="h-full pt-[100px]">
-      <div className="flex flex-col ">
+    <aside className="h-full pt-[35px]">
+      <div className="flex flex-col  md:pt-[80px]">
         <SectionTile title="Categories" />
         <nav className="pt-[15px]">
-          <ul className="flex flex-col gap-[20px]">
+          <ul className="flex md:flex-col flex-wrap gap-[20px]">
             {SIDE_LINKS.map((link) => (
               <li key={link.path}>
                 <a
@@ -24,10 +24,10 @@ const SideNav = () => {
             ))}
           </ul>
         </nav>
-        <div className="min-w-[246px] min-h-[95px] w-full flex-wrap mt-[28px]">
-          <SectionTile title="Latest Stories" />
-          <div className="flex flex-col gap-[20px] mt-[20px] h-full">
-            {[1, 2, 3].map((_, index) => (
+        <div className=" w-full flex-wrap mt-[20px] md:mt-[28px]">
+          <SectionTile title="Latest Posts" />
+          <div className="grid grid-cols-2 md:flex flex-col gap-[20px] mt-[20px]">
+            {[1, 2].map((_, index) => (
               <PostCard
                 key={index}
                 imageUrl={PostImage}
@@ -37,7 +37,7 @@ const SideNav = () => {
             ))}
           </div>
         </div>
-        <div className="mt-[49px] ">
+        <div className="mt-[30px] md:mt-[49px] ">
           <SectionTile title="Tags" />
           <div className="flex gap-2 mt-[20px] w-full flex-wrap">
             {[1, 2, 3, 4, 6, 7, 8].map((_, index) => (
@@ -45,8 +45,8 @@ const SideNav = () => {
             ))}
           </div>
         </div>
-        <div className="mt-[49px] ">
-          <AdPlaceholder></AdPlaceholder>
+        <div className="hidden md:block mt-[49px] ">
+          <AdPlaceholder />
         </div>
       </div>
     </aside>

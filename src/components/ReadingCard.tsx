@@ -18,16 +18,16 @@ const ReadingCard: FC<Props> = ({
   authorImageUrl,
 }) => {
   return (
-    <div className="flex flex-col max-w-[317px] max-h-[354px] w-full flex-wrap">
+    <div className="flex flex-col ">
       <div>
-        <img src={imageUrl} alt="Banner" />
+        <img src={imageUrl} alt="Banner" className="w-full" />
       </div>
-      <div className="flex gap-1 py-2">
+      <div className="flex gap-[8px] mt-[15px]">
         <Tag title="News" />
         <Tag title="Smart banking summit" />
       </div>
-      <div>
-        <p className="text-[16px] text-[#1c1b21] font-[400] leading-[23.04px]">
+      <div className="mt-[6px]">
+        <p className="text-[16px] text-[#1c1b21] font-[300] leading-[23.04px]">
           {title}
         </p>
       </div>
