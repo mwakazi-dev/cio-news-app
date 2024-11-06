@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import Tag from "./Tag";
+import BannerImage from "../assets/images/banner.svg";
 
 interface Props {
   imageUrl?: string;
@@ -11,7 +12,7 @@ interface Props {
 }
 
 const ReadingCard: FC<Props> = ({
-  imageUrl,
+  imageUrl = BannerImage,
   date,
   title,
   author,

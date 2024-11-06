@@ -1,11 +1,13 @@
 import { FC } from "react";
 
+import BannerImage from "../assets/images/banner.svg";
+
 interface Props {
   imageUrl?: any;
-  date?: string;
-  title?: string;
+  date: string;
+  title: string;
 }
-const PostCard: FC<Props> = ({ imageUrl, date, title }) => {
+const PostCard: FC<Props> = ({ imageUrl = BannerImage, date, title }) => {
   return (
     <div className=" flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-[19px] ">
       <div className="w-[100%] md:w-fit">

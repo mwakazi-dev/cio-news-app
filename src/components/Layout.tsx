@@ -1,10 +1,13 @@
 import { FC, ReactNode } from "react";
+import { useQuery } from "@tanstack/react-query";
 
+import { newsService } from "../services/newsService";
+import { Post } from "../types/post";
+import { convertDateToReadable } from "../lib/utils";
 import Navbar from "./Navbar";
 import SideNav from "./SideNav";
 import ReadingCard from "./ReadingCard";
 import Button from "./Button";
-import Readingmage from "../assets/images/reading_1.png";
 import PageFooter from "./PageFooter";
 
 interface Props {
@@ -12,6 +15,12 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({ children }) => {
+  // I have utilized this for caching purposes to improve performance
+  const { data, isLoading } = useQuery({
+    queryKey: ["news"],
+    queryFn: newsService.getNews,
+  });
+
   return (
     <div className="w-full h-full flex flex-col ">
       <div className="mx-[16px] md:mx-[80px] flex-grow">
@@ -29,14 +38,14 @@ const Layout: FC<Props> = ({ children }) => {
           <Button label="See All" />
         </div>
         <div className="flex flex-col md:flex-row gap-8 mt-[75px]">
-          {[1, 2, 3, 4].map((item, index) => (
+          {isLoading && <div>Loading...</div>}
+          {(data?.data.posts || []).slice(2, 6).map((post: Post) => (
             <ReadingCard
-              key={index}
-              imageUrl={Readingmage}
-              title="The future of banking is open"
-              author="John DOe"
-              authorImageUrl={Readingmage}
-              date="23/04/2023"
+              key={post.id}
+              title={post.title}
+              author={post.author}
+              authorImageUrl={post.profileImage}
+              date={convertDateToReadable(post.publishedAt)}
             />
           ))}
         </div>
@@ -47,7 +56,3 @@ const Layout: FC<Props> = ({ children }) => {
 };
 
 export default Layout;
-// imageUrl?: string;
-// date?: string;
-// title?: string;
-// author?: string;

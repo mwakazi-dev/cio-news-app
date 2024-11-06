@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 
 const queryClient = new QueryClient();
 
-function App() {
+const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Layout>
@@ -13,6 +13,6 @@ function App() {
       </Layout>
     </QueryClientProvider>
   );
-}
+};
 
 export default App;

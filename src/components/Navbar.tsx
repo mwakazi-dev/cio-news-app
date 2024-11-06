@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { twMerge } from "tailwind-merge";
+
 import { NAV_LINKS } from "../constants/data";
 import { ButtonVariant } from "../types/enums";
 import { ReactComponent as AccountIcon } from "../assets/images/account.svg";
@@ -7,8 +10,6 @@ import OnlineAvatar from "./OnlineAvatar";
 import Logo from "./Logo";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
-import { useState } from "react";
-import { twMerge } from "tailwind-merge";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("/");

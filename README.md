@@ -66,3 +66,4 @@ This project is a news app built with React js, Typescript, Tailwind. It provide
 - Implement a search functionality
 - Implement a dark
 - Increease responsiveness to enhance user experience
+- fix image resonsiveness

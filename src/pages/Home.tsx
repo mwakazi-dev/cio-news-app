@@ -1,23 +1,13 @@
-// import { useQuery } from "@tanstack/react-query";
-
 import { ReactComponent as ClockIcon } from "../assets/images/clock.svg";
-// import { newsService } from "../services/newsService";
 import Tag from "../components/Tag";
 import BannerImage from "../assets/images/banner.svg";
 import authorImageUrl from "../assets/images/reading_1.png";
 import BannerImage2 from "../assets/images/banner_2.svg";
 import BlockQuote from "../components/BlockQuote";
 import AdPlaceholder from "../components/AdPlaceholder";
+
 const Home = () => {
   const tags = ["Technology", "Cybersecurity", "Cloud", "Business", "Economy"];
-
-  // I have utilized this for caching purposes to improve performance
-  // const { isLoading } = useQuery({
-  //   queryKey: ["news"],
-  //   queryFn: newsService.getNews,
-  // });
-
-  // if (isLoading) return <p>Loading...</p>;
 
   return (
     <div>

@@ -1,10 +1,67 @@
 {
-  "news": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ]
+  "news": {
+    "posts": [
+      {
+        "id": 1,
+        "title": "Lorem ipsum dolor sit amet",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "author": "John Doe",
+        "publishedAt": "2024-02-01T12:00:00Z",
+        "profileImage": "https://randomuser.me/api/portraits/women/1.jpg",
+        "thumbnail": "https://picsum.photos/200/100",
+        "tags": ["Technology", "Science", "Health"]
+      },
+      {
+        "id": 2,
+        "title": "Nullam vitae neque non velit dictum facilisis",
+        "content": "Nullam vitae neque non velit dictum facilisis.",
+        "author": "Jane Smith",
+        "publishedAt": "2024-01-02T12:00:00Z",
+        "profileImage": "https://randomuser.me/api/portraits/men/2.jpg",
+        "thumbnail": "https://placebear.com/200/100",
+        "tags": ["Travel", "Food", "Fashion"]
+      },
+      {
+        "id": 3,
+        "title": "Sed vel sapien in mauris convallis bibendum at vitae arcu",
+        "content": "Sed vel sapien in mauris convallis bibendum at vitae arcu.",
+        "author": "Son King",
+        "publishedAt": "2023-05-01T12:00:00Z",
+        "profileImage": "https://randomuser.me/api/portraits/women/2.jpg",
+        "thumbnail": "https://picsum.photos/200/150",
+        "tags": ["Sports", "Entertainment", "Lifestyle"]
+      },
+      {
+        "id": 4,
+        "title": "Masunn ipsum dolor sit amet",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "author": "Kenneth",
+        "published_at": "2023-04-04T12:00:00Z",
+        "profileImage": "https://randomuser.me/api/portraits/women/1.jpg",
+        "thumbnail": "https://picsum.photos/200/150",
+        "tags": ["Technology", "Science", "Health"]
+      },
+      {
+        "id": 5,
+        "title": "Nullam vitae neque non velit dictum facilisis",
+        "content": "Nullam vitae neque non velit dictum facilisis.",
+        "author": "Bob",
+        "publishedAt": "2022-12-03T12:00:00Z",
+        "profileImage": "https://randomuser.me/api/portraits/men/2.jpg",
+        "thumbnail": "https://picsum.photos/200/200",
+        "tags": ["Travel", "Food", "Fashion"]
+      },
+      {
+        "id": 6,
+        "title": "Sed vel sapien in mauris convallis bibendum at vitae arcu",
+        "content": "Sed vel sapien in mauris convallis bibendum at vitae arcu.",
+        "author": "Jeremy",
+        "publishedAt": "2022-01-01T12:00:00Z",
+        "profileImage": "https://randomuser.me/api/portraits/women/2.jpg",
+        "thumbnail": "https://picsum.photos/200/200",
+        "tags": ["Sports", "Entertainment", "Lifestyle"]
+      }
+    ],
+    "tags": ["Kenya", "East Africa", "Politics"]
+  }
 }

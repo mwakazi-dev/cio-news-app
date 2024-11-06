@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { ReactComponent as LogoSvgDark } from "../assets/images/logo.svg";
 import { ReactComponent as LogoSvgLight } from "../assets/images/logo_light.svg";
 

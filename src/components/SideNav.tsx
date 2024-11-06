@@ -1,11 +1,21 @@
+import { useQuery } from "@tanstack/react-query";
+
 import { SIDE_LINKS } from "../constants/data";
+import Tag from "./Tag";
+import { newsService } from "../services/newsService";
+import { Post } from "../types/post";
+import { convertDateToReadable } from "../lib/utils";
+import AdPlaceholder from "./AdPlaceholder";
 import PostCard from "./PostCard";
 import SectionTile from "./SectionTitle";
-import PostImage from "../assets/images/post_1.png";
-import Tag from "./Tag";
-import AdPlaceholder from "./AdPlaceholder";
 
 const SideNav = () => {
+  // I have utilized this for caching purposes to improve performance
+  const { data, isLoading } = useQuery({
+    queryKey: ["news"],
+    queryFn: newsService.getNews,
+  });
+
   return (
     <aside className="h-full pt-[35px]">
       <div className="flex flex-col  md:pt-[80px]">
@@ -24,27 +34,38 @@ const SideNav = () => {
             ))}
           </ul>
         </nav>
-        <div className=" w-full flex-wrap mt-[20px] md:mt-[28px]">
-          <SectionTile title="Latest Posts" />
-          <div className="grid grid-cols-2 md:flex flex-col gap-[20px] mt-[20px]">
-            {[1, 2].map((_, index) => (
-              <PostCard
-                key={index}
-                imageUrl={PostImage}
-                date="12/03/2023"
-                title="Lorem ipsum dolor sit amet."
-              />
-            ))}
+        <>
+          <div className=" w-full flex-wrap mt-[20px] md:mt-[28px]">
+            <SectionTile title="Latest Posts" />
+            {isLoading && <p className="text-xs mt-3">Loading...</p>}
+
+            {!isLoading && (
+              <div className="grid grid-cols-2 md:flex flex-col gap-[20px] mt-[20px]">
+                {data?.data?.posts
+                  ?.slice(0, 3) // get the latest 3 posts
+                  .map((post: Post) => (
+                    <PostCard
+                      key={post.id}
+                      imageUrl={post.thumbnail}
+                      date={convertDateToReadable(post.publishedAt)}
+                      title={post.title}
+                    />
+                  ))}
+              </div>
+            )}
           </div>
-        </div>
-        <div className="mt-[30px] md:mt-[49px] ">
-          <SectionTile title="Tags" />
-          <div className="flex gap-2 mt-[20px] w-full flex-wrap">
-            {[1, 2, 3, 4, 6, 7, 8].map((_, index) => (
-              <Tag key={index} title="Lorem ipsum" />
-            ))}
+          <div className="mt-[30px] md:mt-[49px] ">
+            <SectionTile title="Tags" />
+            {isLoading && <p className="text-xs mt-3">Loading...</p>}
+            {!isLoading && (
+              <div className="flex gap-2 mt-[20px] w-full flex-wrap">
+                {(data?.data?.tags || []).map((tag: string) => (
+                  <Tag key={tag} title={tag} />
+                ))}
+              </div>
+            )}
           </div>
-        </div>
+        </>
         <div className="hidden md:block mt-[49px] ">
           <AdPlaceholder />
         </div>

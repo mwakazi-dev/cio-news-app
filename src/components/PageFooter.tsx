@@ -1,5 +1,3 @@
-import Logo from "./Logo";
-import Button from "./Button";
 import { ButtonVariant } from "../types/enums";
 import { ReactComponent as FacebookIcon } from "../assets/images/facebook.svg";
 import { ReactComponent as TwitterIconfrom } from "../assets/images/twitter.svg";
@@ -8,6 +6,8 @@ import { ReactComponent as InstagramIcon } from "../assets/images/instagram.svg"
 import { ReactComponent as YoutubeIcon } from "../assets/images/youtube.svg";
 import { ReactComponent as FlickrIcon } from "../assets/images/flickr.svg";
 import { FOOTER_LINKS } from "../constants/data";
+import Logo from "./Logo";
+import Button from "./Button";
 
 const PageFooter = () => {
   return (
@@ -52,7 +52,7 @@ const PageFooter = () => {
                   Terms & Conditions
                 </a>
               </li>
-              <li>
+              <li className=" xs:block sm:block md:hidden">
                 <a
                   href="/"
                   className="text-[15px] leading-[19.53px] font-[300] text-center"
